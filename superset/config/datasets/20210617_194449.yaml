@@ -1,0 +1,22 @@
+- columns:
+  - column_name: container_name
+    expression: ''
+    type: VARCHAR
+  - column_name: stream
+    expression: ''
+    type: VARCHAR
+  - column_name: logs
+    expression: ''
+    type: BIGINT
+  metrics:
+  - expression: count(*)
+    extra: '{"warning_markdown":null}'
+    metric_name: count
+  schema: default
+  sql: 'select kubernetes.container_name,stream,count(*) as logs from default.".ds-logs-generic-default-2021.06.07-000001:
+    @timestamp:>=now-1h"
+
+    group by kubernetes.container_name,stream
+
+    '
+  table_name: Logs By Container Name 06/03/2021 17:50:07

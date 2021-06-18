@@ -1,0 +1,19 @@
+- columns:
+  - column_name: timestamp
+    is_dttm: true
+    type: TIMESTAMP WITH TIME ZONE
+  - column_name: destination_app
+    type: VARCHAR
+  - column_name: source_app
+    type: VARCHAR
+  - column_name: bytes
+    type: DOUBLE
+  metrics:
+  - expression: count(*)
+    metric_name: count
+  sql: "select\n\t\"timestamp\",\n\tvalue as bytes,\n\telement_at(labels,\n\t'source_workload')\
+    \ as source_app,\n\telement_at(labels,\n\t'destination_workload') as destination_app\n\
+    from\n\tprometheus.\"default\".istio_tcp_sent_bytes_total \n\t\nwhere element_at(labels,'destination_workload')\
+    \ not in ('unknown','istio-telemetry') and element_at(labels,'source_workload')\
+    \ not in ('unknown','istio-telemetry')"
+  table_name: K8S TCP Traffic

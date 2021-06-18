@@ -1,0 +1,692 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "K8S Logs Overview",
+                "description": null,
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": \"bnbColors\", \"show_native_filters\": true, \"native_filter_configuration\": [], \"label_colors\": {}, \"remote_id\": 1}",
+                "position_json": "{\"CHART-1GCuV7TOdv\":{\"children\":[],\"id\":\"CHART-1GCuV7TOdv\",\"meta\":{\"chartId\":2,\"height\":93,\"sliceName\":\"K8S HTTP  Workload Traffic - Sankey Chart\",\"uuid\":\"a21ffabd-16d1-40ef-9120-f52d188bc7a3\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-SKFq3R3SF\"],\"type\":\"CHART\"},\"CHART-2-559ToWp0\":{\"children\":[],\"id\":\"CHART-2-559ToWp0\",\"meta\":{\"chartId\":3,\"height\":75,\"sliceName\":\"K8S TCP Traffic Flow - SanKey\",\"uuid\":\"1ebac6d5-ce19-48bd-b66f-dd16790b68c6\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-GUKvW85uc\"],\"type\":\"CHART\"},\"CHART-_RSAm2QPji\":{\"children\":[],\"id\":\"CHART-_RSAm2QPji\",\"meta\":{\"chartId\":5,\"height\":59,\"sliceName\":\"K8S TCP Heat Map\",\"uuid\":\"850950a8-831d-40a8-8337-6be9451f7872\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-IKU466tV5A\"],\"type\":\"CHART\"},\"CHART-dtWeI100SC\":{\"children\":[],\"id\":\"CHART-dtWeI100SC\",\"meta\":{\"chartId\":4,\"height\":59,\"sliceName\":\"Hourly Workload Syslog Steam Count\",\"uuid\":\"84fb253d-d3b6-42a4-8df5-6e37bf4701ce\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-W3ovgcaxRV\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"DIVIDER-g7DJfSsgaW\":{\"children\":[],\"id\":\"DIVIDER-g7DJfSsgaW\",\"meta\":{},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"DIVIDER\"},\"GRID_ID\":{\"children\":[\"HEADER-ZBnDktw-il\",\"ROW-GUKvW85uc\",\"ROW-SKFq3R3SF\",\"DIVIDER-g7DJfSsgaW\",\"ROW-W3ovgcaxRV\",\"ROW-IKU466tV5A\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER-ZBnDktw-il\":{\"children\":[],\"id\":\"HEADER-ZBnDktw-il\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"headerSize\":\"MEDIUM_HEADER\",\"text\":\"K8S Cluster Monitoring\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"HEADER\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"K8S Logs Overview\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-GUKvW85uc\":{\"children\":[\"CHART-2-559ToWp0\"],\"id\":\"ROW-GUKvW85uc\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-IKU466tV5A\":{\"children\":[\"CHART-_RSAm2QPji\"],\"id\":\"ROW-IKU466tV5A\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-SKFq3R3SF\":{\"children\":[\"CHART-1GCuV7TOdv\"],\"id\":\"ROW-SKFq3R3SF\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-W3ovgcaxRV\":{\"children\":[\"CHART-dtWeI100SC\"],\"id\":\"ROW-W3ovgcaxRV\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "default.K8S Istio Traffic",
+                            "datasource_type": "table",
+                            "id": 2,
+                            "params": "{\"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"yb-master\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_wrrd7if2sd7_exfrd51w1x\", \"isExtra\": false, \"isNew\": false, \"operator\": \"!=\", \"sqlExpression\": null, \"subject\": \"destination_app\"}, {\"clause\": \"WHERE\", \"comparator\": \"neo-connect-cluster-connect\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_tcjf0p0n8b_jon95njwuni\", \"isExtra\": false, \"isNew\": false, \"operator\": \"!=\", \"sqlExpression\": null, \"subject\": \"destination_app\"}], \"color_scheme\": \"bnbColors\", \"datasource\": \"4__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"timestamp\", \"groupby\": [\"source_app\", \"destination_app\"], \"label_colors\": {}, \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"bytes\", \"description\": null, \"expression\": \"\", \"filterable\": true, \"groupby\": true, \"id\": 56, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(bytes)\", \"optionName\": \"metric_49e8ogdeu51_jhw68m49scd\", \"sqlExpression\": null}, \"row_limit\": 50000, \"slice_id\": 2, \"sort_by_metric\": true, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"sankey\", \"remote_id\": 2, \"datasource_name\": \"K8S Istio Traffic\", \"schema\": \"default\", \"database_name\": \"elk\"}",
+                            "slice_name": "K8S HTTP  Workload Traffic - Sankey Chart",
+                            "viz_type": "sankey"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "K8S TCP Traffic Flow",
+                            "datasource_type": "table",
+                            "id": 3,
+                            "params": "{\"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"isengard-es-master\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_y09wl3fs6tf_3p2s3ha7wrf\", \"isExtra\": false, \"isNew\": false, \"operator\": \"!=\", \"sqlExpression\": null, \"subject\": \"source_app\"}, {\"clause\": \"WHERE\", \"comparator\": null, \"expressionType\": \"SQL\", \"filterOptionName\": \"filter_k0y4uybx67_h7qase0ebe4\", \"isExtra\": false, \"isNew\": false, \"operator\": null, \"sqlExpression\": \"not(source_app = destination_app)\", \"subject\": null}, {\"clause\": \"WHERE\", \"comparator\": null, \"expressionType\": \"SQL\", \"filterOptionName\": \"filter_um4zvcflwz9_br96fevvb7\", \"isExtra\": false, \"isNew\": false, \"operator\": null, \"sqlExpression\": \"not(destination_app  = 'isengard-es-data' and source_app ='logstash-logstash') and not(destination_app  = 'isengard-es-data' and source_app ='isengard-es-coordinator')\", \"subject\": null}, {\"clause\": \"WHERE\", \"comparator\": \"yb-master\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_axto56jtt2u_bbult7ab8wi\", \"isExtra\": false, \"isNew\": false, \"operator\": \"!=\", \"sqlExpression\": null, \"subject\": \"destination_app\"}], \"color_scheme\": \"bnbColors\", \"datasource\": \"5__table\", \"extra_form_data\": {}, \"groupby\": [\"source_app\", \"destination_app\"], \"label_colors\": {}, \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"bytes\", \"description\": null, \"expression\": \"\", \"filterable\": true, \"groupby\": true, \"id\": 71, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(bytes)\", \"optionName\": \"metric_b9ekhw7rxfc_mvijqgza7hh\", \"sqlExpression\": null}, \"row_limit\": 10000, \"slice_id\": 3, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"sankey\", \"remote_id\": 3, \"datasource_name\": \"K8S TCP Traffic Flow\", \"schema\": null, \"database_name\": \"elk\"}",
+                            "slice_name": "K8S TCP Traffic Flow - SanKey",
+                            "viz_type": "sankey"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "default.Logs By Container Name 06/03/2021 17:50:07",
+                            "datasource_type": "table",
+                            "id": 4,
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"bnbColors\", \"columns\": [\"stream\"], \"datasource\": \"3__table\", \"extra_form_data\": {}, \"groupby\": [\"container_name\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"logs\", \"description\": null, \"expression\": \"\", \"filterable\": true, \"groupby\": true, \"id\": 80, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"BIGINT\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(logs)\", \"optionName\": \"metric_l5nb06qq7p_wjk3kx9qyhf\", \"sqlExpression\": null}], \"order_bars\": false, \"order_desc\": false, \"row_limit\": 50000, \"show_bar_value\": false, \"show_controls\": true, \"slice_id\": 4, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {\"preselect_filters\": \"{}\"}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"y_axis_label\": \"Sum(Logs)\", \"y_axis_showminmax\": false, \"remote_id\": 4, \"datasource_name\": \"Logs By Container Name 06/03/2021 17:50:07\", \"schema\": \"default\", \"database_name\": \"elk\"}",
+                            "slice_name": "Hourly Workload Syslog Steam Count",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "default.K8S TCP Event Flow",
+                            "datasource_type": "table",
+                            "id": 5,
+                            "params": "{\"adhoc_filters\": [], \"all_columns_x\": \"source_app\", \"all_columns_y\": \"destination_app\", \"bottom_margin\": 50, \"canvas_image_rendering\": \"pixelated\", \"datasource\": \"7__table\", \"extra_form_data\": {}, \"left_margin\": \"auto\", \"linear_color_scheme\": \"oranges\", \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"bytes\", \"description\": null, \"expression\": \"\", \"filterable\": true, \"groupby\": true, \"id\": 115, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DOUBLE\", \"type_generic\": 0, \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(bytes)\", \"optionName\": \"metric_717mdc30swt_bdl693v28zs\", \"sqlExpression\": null}, \"normalize_across\": \"heatmap\", \"normalized\": false, \"row_limit\": 50000, \"show_legend\": false, \"show_perc\": true, \"show_values\": true, \"slice_id\": 5, \"sort_by_metric\": false, \"sort_x_axis\": \"alpha_asc\", \"sort_y_axis\": \"alpha_asc\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"heatmap\", \"xscale_interval\": 1, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"yscale_interval\": 1, \"remote_id\": 5, \"datasource_name\": \"K8S TCP Event Flow\", \"schema\": \"default\", \"database_name\": \"elk\"}",
+                            "slice_name": "K8S TCP Heat Map",
+                            "viz_type": "heatmap"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-07T06:42:46"
+                            },
+                            "column_name": "container_name",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T14:12:24"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 78,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "VARCHAR",
+                            "uuid": "5985d5dd-701e-43ad-8992-9aa52787b73b",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-07T06:42:46"
+                            },
+                            "column_name": "stream",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T14:12:24"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 79,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "VARCHAR",
+                            "uuid": "3c597cab-fb8f-4494-9b35-dcbbfd6d8bb4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-07T06:42:46"
+                            },
+                            "column_name": "logs",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T14:12:24"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 80,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "BIGINT",
+                            "uuid": "7a77d792-9def-46d1-a021-7bb1d220aa3c",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 3,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-03T14:52:16"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-03T14:51:03"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": "{\"warning_markdown\":null}",
+                            "id": 2,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 3,
+                            "uuid": "5c5387e0-8a17-4570-975c-b9cf5f0623b0",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 3, \"database_name\": \"elk\"}",
+                "schema": "default",
+                "sql": "select kubernetes.container_name,stream,count(*) as logs from default.\".ds-logs-generic-default-2021.06.07-000001: @timestamp:>=now-1h\"\ngroup by kubernetes.container_name,stream\n",
+                "table_name": "Logs By Container Name 06/03/2021 17:50:07",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:31:05"
+                            },
+                            "column_name": "timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T09:57:06"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 55,
+                            "is_active": null,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "TIMESTAMP WITH TIME ZONE",
+                            "uuid": "01323ca2-3166-4cda-bbbd-86a75ee947e1",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:31:05"
+                            },
+                            "column_name": "bytes",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T09:57:06"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 56,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "DOUBLE",
+                            "uuid": "47926212-9a5a-45fe-a370-6cc6fcc2040d",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:31:05"
+                            },
+                            "column_name": "source_app",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T09:57:06"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 57,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "VARCHAR",
+                            "uuid": "b903a64f-ef4d-4252-ad3f-c5ab6e63c878",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:31:05"
+                            },
+                            "column_name": "destination_app",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T09:57:06"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 58,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "VARCHAR",
+                            "uuid": "23f9201f-b9d5-454c-a45b-9bcc93b14524",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:31:05"
+                            },
+                            "column_name": "protocol",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T09:57:06"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 59,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "VARCHAR",
+                            "uuid": "f4d6c593-5e52-41e0-a5df-f4cb5433a8b9",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 3,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:31:05"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T09:35:19"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": "{\"warning_markdown\":null}",
+                            "id": 3,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 4,
+                            "uuid": "881113cf-3d1f-4ed8-8bdd-3598f558b487",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 4, \"database_name\": \"elk\"}",
+                "schema": "default",
+                "sql": "select\n\t\"timestamp\",\n\tvalue as bytes,\n\telement_at(labels,\n\t'source_workload') as source_app,\n\telement_at(labels,\n\t'destination_workload') as destination_app,\n\telement_at(labels,\n\t'request_protocol')  as protocol\nfrom\n\tprometheus.\"default\".istio_request_bytes_sum \n\t\nwhere element_at(labels,'destination_workload') not in ('unknown') and element_at(labels,'source_workload') not in ('unknown')\n",
+                "table_name": "K8S Istio Traffic",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T16:51:38"
+                            },
+                            "column_name": "timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:51:37"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 102,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 5,
+                            "type": "TIMESTAMP WITH TIME ZONE",
+                            "uuid": "32160986-2b49-44f6-aac2-a672f5e479be",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T16:51:38"
+                            },
+                            "column_name": "bytes",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:51:37"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 103,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 5,
+                            "type": "DOUBLE",
+                            "uuid": "d3e880a1-03cf-4e47-b239-fbea6db44b29",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T16:51:38"
+                            },
+                            "column_name": "source_app",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:51:37"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 104,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 5,
+                            "type": "VARCHAR",
+                            "uuid": "418c6d88-355d-41ad-aae0-3474c74508b8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T16:51:38"
+                            },
+                            "column_name": "destination_app",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:51:37"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 105,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 5,
+                            "type": "VARCHAR",
+                            "uuid": "400ed850-4e87-4b60-b08e-9c0ffa21c96a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T16:51:38"
+                            },
+                            "column_name": "protocol",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:51:37"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 106,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 5,
+                            "type": "VARCHAR",
+                            "uuid": "32ab5be2-f14b-47de-8565-2ea4dfe82ce8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T16:51:38"
+                            },
+                            "column_name": "labels",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:51:37"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 107,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 5,
+                            "type": "MAP(VARCHAR, VARCHAR)",
+                            "uuid": "0e53aabe-7d88-48d5-9a4a-08d8cbb40fc3",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 3,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T10:08:16"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T10:08:16"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 4,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 5,
+                            "uuid": "c1b9c192-b4d3-4f98-b32f-3ce26dc2a50f",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 5, \"database_name\": \"elk\"}",
+                "schema": null,
+                "sql": "select\n\t\"timestamp\",\n\tvalue as bytes,\n\telement_at(labels,\n\t'source_workload') as source_app,\n\telement_at(labels,\n\t'destination_workload') as destination_app,\n\telement_at(labels,\n\t'request_protocol')  as protocol,labels\nfrom\n\tprometheus.\"default\".istio_tcp_sent_bytes_total \n\t\nwhere element_at(labels,'destination_workload') not in ('unknown','istio-telemetry') and element_at(labels,'source_workload') not in ('unknown','istio-telemetry')\n",
+                "table_name": "K8S TCP Traffic Flow",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T18:12:29"
+                            },
+                            "column_name": "timestamp",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T18:12:28"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 114,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 7,
+                            "type": "TIMESTAMP WITH TIME ZONE",
+                            "uuid": "663afb4c-ee80-4afb-931c-224572fa6c59",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T18:12:29"
+                            },
+                            "column_name": "bytes",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T18:12:28"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 115,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 7,
+                            "type": "DOUBLE",
+                            "uuid": "03908f77-df1a-48f0-a90a-e3b4b583f6b2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T18:12:29"
+                            },
+                            "column_name": "source_app",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T18:12:28"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 116,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 7,
+                            "type": "VARCHAR",
+                            "uuid": "b06a720d-d4d2-46ce-bae4-f315babd284e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T18:12:29"
+                            },
+                            "column_name": "destination_app",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T18:12:28"
+                            },
+                            "description": null,
+                            "expression": "",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 117,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 7,
+                            "type": "VARCHAR",
+                            "uuid": "ee09d3e8-32dc-468e-9d6d-eb016c0bf735",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 3,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-04T17:01:59"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-04T16:09:16"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": "{\"warning_markdown\":null}",
+                            "id": 6,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 7,
+                            "uuid": "abe5d251-9bdb-4c8a-9447-28ff2135d9ee",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 7, \"database_name\": \"elk\"}",
+                "schema": "default",
+                "sql": "select\n\t\"timestamp\",\n\tvalue as bytes,\n\telement_at(labels,\n\t'source_workload') as source_app,\n\telement_at(labels,\n\t'destination_workload') as destination_app\nfrom\n\tprometheus.\"default\".istio_tcp_sent_bytes_total \n\t\nwhere element_at(labels,'destination_workload') not in ('unknown','istio-telemetry') and element_at(labels,'source_workload') not in ('unknown','istio-telemetry')\n",
+                "table_name": "K8S TCP Event Flow",
+                "template_params": null
+            }
+        }
+    ]
+}
